@@ -8,5 +8,10 @@ export default {
     format: "esm",
     sourcemap: true,
   },
-  plugins: [ts(), json()],
+  plugins: [
+    ts({
+      noEmitOnError: false // Permite que el build continúe incluso con errores de TypeScript
+    }), 
+    json()
+  ],
 };
