@@ -1,0 +1,27 @@
+{
+  "name": "typescript-bundler-comparison",
+  "type": "module",
+  "scripts": {
+    "compare": "node compare.js",
+    "build:esbuild": "node bundlers/esbuild.config.js",
+    "build:rollup": "rollup -c bundlers/rollup.config.js",
+    "build:vite": "vite build --config bundlers/vite.config.js",
+    "build:rspack": "rspack build -c bundlers/rspack.config.js",
+    "build:webpack": "webpack --config bundlers/webpack.config.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.x",
+    "@rollup/plugin-typescript": "^11.x",
+    "@rspack/cli": "^1.x",
+    "@rspack/core": "^1.x",
+    "@swc/core": "^1.15.3",
+    "esbuild": "^0.20.0",
+    "json-loader": "^0.5.7",
+    "rollup": "^4.x",
+    "ts-loader": "^9.x",
+    "typescript": "^5.x",
+    "vite": "^6.x",
+    "webpack": "^5.x",
+    "webpack-cli": "^5.x"
+  }
+}
